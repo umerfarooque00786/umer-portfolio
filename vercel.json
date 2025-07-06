@@ -12,7 +12,6 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://your-domain.vercel.app",
         "APP_CONFIG_CACHE": "/tmp",
         "APP_EVENTS_CACHE": "/tmp",
         "APP_PACKAGES_CACHE": "/tmp",
@@ -21,7 +20,9 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+        "FILESYSTEM_DISK": "local",
+        "QUEUE_CONNECTION": "sync"
     },
     "build": {
         "env": {
