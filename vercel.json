@@ -1,10 +1,11 @@
 {
     "version": 2,
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.7.0"
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "vercel-php@0.7.0"
         }
-    },
+    ],
     "routes": [
         {
             "src": "/build/(.*)",
@@ -29,7 +30,5 @@
         "DB_CONNECTION": "sqlite",
         "DB_DATABASE": "/tmp/database.sqlite",
         "APP_KEY": "base64:4j87ZAb0006HAMzZpaVvQ33uK4RWEUyNdHwRHnePkU8="
-    },
-    "buildCommand": "npm run build",
-    "outputDirectory": "public"
+    }
 }
