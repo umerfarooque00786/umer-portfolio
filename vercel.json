@@ -1,9 +1,16 @@
 {
     "version": 2,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.0",
+            "maxDuration": 30
+        }
     },
     "routes": [
+        {
+            "src": "/build/(.*)",
+            "dest": "/public/build/$1"
+        },
         {
             "src": "/(css|js|images|fonts|favicon\\.ico|robots\\.txt)",
             "dest": "/public/$1"
@@ -16,22 +23,9 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_CONFIG_CACHE": "/tmp",
-        "APP_EVENTS_CACHE": "/tmp",
-        "APP_PACKAGES_CACHE": "/tmp",
-        "APP_ROUTES_CACHE": "/tmp",
-        "APP_SERVICES_CACHE": "/tmp",
-        "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
-        "FILESYSTEM_DISK": "local",
         "QUEUE_CONNECTION": "sync"
-    },
-    "build": {
-        "env": {
-            "COMPOSER_MIRROR_PATH_REPOS": "1"
-        }
-    },
-    "outputDirectory": "public"
+    }
 }
