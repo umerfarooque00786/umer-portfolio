@@ -6,7 +6,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <title>@yield('title', 'Admin Dashboard - Umer Farooque Portfolio')</title>
-    
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.svg') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon.svg') }}">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -71,10 +78,17 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('admin.messages.*') ? 'active' : '' }}" 
+                <a class="nav-link {{ request()->routeIs('admin.messages.*') ? 'active' : '' }}"
                    href="{{ route('admin.messages.index') }}">
                     <i class="fas fa-envelope me-2"></i>
                     Messages
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ request()->routeIs('admin.cvs.*') ? 'active' : '' }}"
+                   href="{{ route('admin.cvs.index') }}">
+                    <i class="fas fa-file-pdf me-2"></i>
+                    CV Management
                 </a>
             </li>
             <hr class="text-white-50">

@@ -92,21 +92,13 @@
         <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="footer-copyright">
                         <span>&copy; {{ date('Y') }} Umer Farooque.</span>
                         <span>All rights reserved.</span>
                     </div>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="footer-copyright">
-                        <span>Crafted with</span>
-                        <i class="fas fa-heart footer-heart"></i>
-                        <span>and lots of</span>
-                        <i class="fas fa-coffee" style="color: #8B4513;"></i>
-                        <span>using Laravel & GSAP</span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

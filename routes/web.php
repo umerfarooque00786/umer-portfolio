@@ -20,12 +20,16 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Admin Routes
-Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'verified', 'admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->name('dashboard');
     Route::resource('projects', App\Http\Controllers\Admin\ProjectController::class);
     Route::get('messages', [App\Http\Controllers\Admin\MessageController::class, 'index'])->name('messages.index');
     Route::get('messages/{message}', [App\Http\Controllers\Admin\MessageController::class, 'show'])->name('messages.show');
     Route::delete('messages/{message}', [App\Http\Controllers\Admin\MessageController::class, 'destroy'])->name('messages.destroy');
+
+    // CV Management Routes
+    Route::resource('cvs', App\Http\Controllers\Admin\CvController::class);
+    Route::post('cvs/{cv}/set-active', [App\Http\Controllers\Admin\CvController::class, 'setActive'])->name('cvs.set-active');
 });
 
 Route::middleware('auth')->group(function () {
