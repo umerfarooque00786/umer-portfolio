@@ -41,7 +41,7 @@
                 </div>
 
                 <!-- Quick Links -->
-                <div class="col-lg-2 col-md-6 mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
                     <div class="footer-section">
                         <h5><i class="fas fa-link"></i> Navigation</h5>
                         <ul class="footer-links">
@@ -69,7 +69,7 @@
                 </div>
                 
                 <!-- Technologies -->
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-2 col-md-6 mb-4">
                     <div class="footer-section">
                         <h5><i class="fas fa-code"></i> Technologies</h5>
                         <div class="footer-skills">

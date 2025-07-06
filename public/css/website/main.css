@@ -1,5 +1,8 @@
 /* Website Main CSS */
 
+/* Import Footer Styles */
+@import url('footer.css');
+
 /* Page Loader Styles */
 .page-loader {
     position: fixed;

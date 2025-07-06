@@ -24,7 +24,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <!-- AOS CSS for animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
+    <!-- Website Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/website/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/website/components.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/website/footer.css') }}">
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
