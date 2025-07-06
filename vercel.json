@@ -5,6 +5,10 @@
     },
     "routes": [
         {
+            "src": "/(css|js|images|fonts|favicon\\.ico|robots\\.txt)",
+            "dest": "/public/$1"
+        },
+        {
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
@@ -28,5 +32,6 @@
         "env": {
             "COMPOSER_MIRROR_PATH_REPOS": "1"
         }
-    }
+    },
+    "outputDirectory": "public"
 }
