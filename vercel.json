@@ -1,18 +1,10 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "api/index.php",
-            "use": "vercel-php@0.7.0"
-        },
-        {
-            "src": "package.json",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "public"
-            }
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.0"
         }
-    ],
+    },
     "routes": [
         {
             "src": "/build/(.*)",
@@ -38,7 +30,6 @@
         "DB_DATABASE": "/tmp/database.sqlite",
         "APP_KEY": "base64:4j87ZAb0006HAMzZpaVvQ33uK4RWEUyNdHwRHnePkU8="
     },
-    "github": {
-        "silent": true
-    }
+    "buildCommand": "npm run build",
+    "outputDirectory": "public"
 }
