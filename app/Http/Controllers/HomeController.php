@@ -10,17 +10,17 @@ class HomeController extends Controller
     public function index()
     {
         $projects = Project::latest()->take(6)->get();
-        return view('home', compact('projects'));
+        return view('website.home', compact('projects'));
     }
 
     public function about()
     {
-        return view('about');
+        return view('website.about');
     }
 
     public function projects()
     {
         $projects = Project::latest()->paginate(6);
-        return view('projects', compact('projects'));
+        return view('website.projects', compact('projects'));
     }
 }

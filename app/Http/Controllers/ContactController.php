@@ -12,7 +12,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('contact');
+        return view('website.contact');
     }
 
     public function store(Request $request)
